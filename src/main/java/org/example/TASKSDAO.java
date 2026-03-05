@@ -2,7 +2,6 @@ package org.example;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.criteria.CriteriaBuilder;
-
 import java.util.List;
 
 public class TASKSDAO {
@@ -22,12 +21,10 @@ public class TASKSDAO {
                 em.getTransaction().rollback();
                 return null;
             }
-
             TASKS task = new TASKS();
             task.setTname(tname);
             task.setTdesc(tdesc);
             task.setUser(user); // this sets the foreign key
-
             em.persist(task);
             em.getTransaction().commit();
 

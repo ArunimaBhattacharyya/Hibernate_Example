@@ -33,10 +33,9 @@ public class Main {
         );
 
         boolean deleted = tasksdao.delete(task.getId());
+        System.out.println(deleted);
 
         em.close();
         emf.close();
-
-
     }
 }
